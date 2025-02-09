@@ -1,0 +1,250 @@
+
+.header-warning{
+    background-color: rgb(245, 248, 248);
+    color: #0c0c0c;
+    padding: 16px 0;
+    text-align: center;
+    
+}
+
+.header-warning span{
+    font-weight: bold;
+
+}
+
+.header-warning .deshtop{
+    display: none;
+}
+
+header{
+    background-color: rgb(5, 159, 248);
+}
+
+header .header-main {
+    max-width: 1024px;
+    margin: auto;
+    padding: 33px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-left{
+    display: flex;
+    align-items: center;
+
+}
+
+.header-left .logo4{
+    margin-right: 40px;
+
+}
+.header-left ul{
+    display: none;
+    gap: 40px;
+}
+
+.header-left li a{
+    text-decoration: none;
+    color: rgb(87, 84, 121);
+    font-weight: bold;
+}
+
+.header-left li a:hover{
+    color: rgb(245, 53, 53);
+    
+}
+
+
+.header-right{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.header-right .menu-burger.active{
+    background-color: red;
+
+}
+
+.header-right .menu-burger .on{
+    display: none;
+
+}
+
+.header-right .menu-burger.active .on{
+    display: block;
+
+}
+
+.header-right .menu-burger.active .off{
+    display: none;
+
+}
+
+
+.header-right .seach,
+.header-seach .seach{
+    display: none;
+    width: 190px;
+    height: 48px;
+    border: 1pz solid #325e86c7;
+    background-color: rgb(224, 220, 221);
+    font-size: 1.6rem;
+    outline: none;
+    padding-left: 39px;
+    padding-right: 18px;
+    background-image: url(../images/ui/search.png);
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    background-position: 10px center;
+    color: #325e86c7;
+    font-weight: bold;
+}
+
+.header-seach{
+    padding: 0 24px 24px 24px;
+}
+
+.header-seach .seach{
+    display: flex;
+    width: 100%;
+
+}
+
+.header-menu{
+    padding-bottom: 32px;
+
+}
+
+.header-menu a {
+    display: block;
+    text-decoration: none;
+    color: #325e86c7;
+    font-style: 1.9rem;
+    padding: 24px 32px;
+    font-weight: bold;
+    border: 1pz solid #325e86c7;
+    background-image: url(../images/ui/arrow-up-line.png);
+    background-repeat: no-repeat;
+    box-sizing: 24px 24px;
+    background-position: right 32px center;
+    
+}
+
+.header-menu a:last-child{
+    border-bottom: none;
+
+}
+
+.btn-icon{
+    width: 48px;
+    height: 48px;
+    border: 1px solid #c0b3b3;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-icon:hover{
+    background-color: rgb(221, 218, 221);
+}
+
+.header-menu:hover{
+    color: beige;
+ 
+}
+.header-warning .desktop{
+    display: none;
+}
+
+/* sa a se pou li afiche sou gran ekran mwnen ap byen pase la a */
+
+@media (width > 714px){         
+    .header-warning .desktop{
+        display: block;
+    }
+
+    .header-warning .mobile{
+        display: none;
+    }
+
+    .header-left ul{
+        display: flex;
+    }
+
+    
+    /* Style du texte qui défile */
+    .mobile {
+        display: inline-block;
+        animation: defilement 30s linear infinite;
+    }
+
+    /* Animation du texte */
+    @keyframes defilement {
+        from {
+            transform: translateX(100%);
+        }
+        to {
+            transform: translateX(-100%);
+        }
+    }
+
+   
+}
+/* sa a se pou li afiche sou gran ekran mwnen ap byen pase la a */
+
+@media (width > 1024px) {
+    .header-seach{
+        display: none;
+    
+    }
+    .header-right ul{
+        display: flex;
+    }
+    .header-right .seach{
+        display: block;
+
+
+    }
+
+
+    .header-right .menu-burger{
+        display: none;
+
+    }
+    
+   
+
+    .header-seach{
+        display: none;
+    
+    }
+
+    .header-menu{
+        display: none !important;
+    }
+
+
+  
+
+    /* Style du texte qui défile */
+    .desktop {
+        gap: 150px;
+        display: flex;
+        display: inline-block;
+        animation: defilement 30s linear infinite;
+    }
+
+    /* Animation du texte */
+    @keyframes defilement {
+        from {
+            transform: translateX(100%);
+        }
+        to {
+            transform: translateX(-100%);
+        }
+    }
+}
+
